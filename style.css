@@ -1,4 +1,15 @@
-.logo{
+.logo {
     width: 100px;
     height: 100px;
+}
+
+.fondo {
+    min-height: 100vhs;
+    background: url(./images/posibleFondo4.jpg) no-repeat center center fixed;
+    background-size: cover;
+    padding: 150px 0 160px;
+}
+
+.transparente {
+    background: rgba(0, 0, 0, 0.7);
 }
