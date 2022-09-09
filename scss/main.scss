@@ -1,3 +1,61 @@
+@mixin botones($color) {
+    background-color: $color;
+    border: none;
+    padding: 10px;
+    border-radius: 05px;
+  }
+  
+  .boton {
+    @include botones(red);
+    color: #fff;
+  }
+  
+  .boton-primario {
+    @include botones(blue);
+    color: #fff;
+  }
+  
+  .boton-secundario {
+    @include botones(#333);
+    color: #fff;
+  }
+  %boton-default {
+    border: none;
+    padding: 10px;
+    border-radius: 05px;
+  }
+  
+  .boton {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 05px;
+  }
+  
+  .boton-primario {
+    @extend .boton;
+    background-color: blue;
+  }
+  
+  .boton-secundario {
+    @extend %boton-default;
+  }
+$estilos: (
+  colorPrimario: #e34529,
+  colorSecundario: #9ecc1f,
+  colorTextoClaro: #fff,
+  colorTextoOscuro: #222,
+  paddingDefault: 10px,
+  borderRadius: 05px
+);
+  
+  .boton-primario {
+    background-color: map-get($estilos, colorPrimario);
+    color: map-get($estilos, colorTextoClaro);
+    padding: map-get($estilos, paddingDefault);
+}
+
 *{
     margin: 0;
     padding: 0;
